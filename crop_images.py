@@ -71,7 +71,7 @@ anchor_scales = [2 ** 0, 2 ** (1.0 / 3.0), 2 ** (2.0 / 3.0)]
 threshold = 0.2
 iou_threshold = 0.2
 
-use_cuda = False
+use_cuda = True
 use_float16 = False
 cudnn.fastest = True
 cudnn.benchmark = True
@@ -107,7 +107,7 @@ if use_float16:
 
 
 # loop over images in batches
-batch_size = 100
+batch_size = 20
 for img_idx in tqdm.tqdm(range(0, len(imgs_path), batch_size)):
     img_path = imgs_path[img_idx:img_idx+batch_size]
 
